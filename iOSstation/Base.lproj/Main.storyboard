@@ -29,7 +29,7 @@
         <scene sceneID="UKl-UK-rg0">
             <objects>
                 <navigationController id="daW-NG-RmL" customClass="LXNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="热销产品" id="oyP-d1-M0m"/>
+                    <tabBarItem key="tabBarItem" title="热销产品" image="tab_main_recommend_normal" id="oyP-d1-M0m"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="isK-Ea-ota">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -65,7 +65,7 @@
         <scene sceneID="xG9-1X-Lir">
             <objects>
                 <navigationController id="W8f-gg-rdz" customClass="LXNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="产品列表" id="WGz-lm-RZW"/>
+                    <tabBarItem key="tabBarItem" title="产品列表" image="tab_main_finance_normal" id="WGz-lm-RZW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6RL-SZ-2YQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -101,7 +101,7 @@
         <scene sceneID="Cxk-Tz-6PF">
             <objects>
                 <navigationController id="vy7-Bn-J7q" customClass="LXNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的财富" id="rcU-Fm-nRM"/>
+                    <tabBarItem key="tabBarItem" title="我的财富" image="tab_main_wealthcenter_normal" id="rcU-Fm-nRM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qce-wJ-juv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -137,7 +137,7 @@
         <scene sceneID="oCq-VH-KKG">
             <objects>
                 <navigationController id="Bpy-ui-8Wi" customClass="LXNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="其他" id="F74-D5-ub1"/>
+                    <tabBarItem key="tabBarItem" title="其他" image="tab_main_more_normal" id="F74-D5-ub1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4FF-vJ-yoe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -170,4 +170,10 @@
             <point key="canvasLocation" x="934" y="1800"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tab_main_finance_normal" width="24" height="24"/>
+        <image name="tab_main_more_normal" width="24" height="24"/>
+        <image name="tab_main_recommend_normal" width="24" height="24"/>
+        <image name="tab_main_wealthcenter_normal" width="24" height="24"/>
+    </resources>
 </document>

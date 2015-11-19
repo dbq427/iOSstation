@@ -14,6 +14,15 @@
 
 @implementation LXNavigationController
 
++ (void)initialize {
+    
+    [super initialize];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor redColor]];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
