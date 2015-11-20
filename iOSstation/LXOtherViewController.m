@@ -9,6 +9,8 @@
 #import "LXOtherViewController.h"
 
 @interface LXOtherViewController ()
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 @end
 
@@ -18,6 +20,8 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor lightGrayColor];
+    
+    self.navigationController.navigationBar.translucent = NO;
     
     
 }
