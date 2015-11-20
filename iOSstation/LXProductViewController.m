@@ -8,7 +8,9 @@
 
 #import "LXProductViewController.h"
 
-@interface LXProductViewController ()
+@interface LXProductViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -19,7 +21,20 @@
     
     self.view.backgroundColor = [UIColor lightGrayColor];
     
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
+}
+
+#pragma mark - UITableViewDataSource/UITableViewDelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 20;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell.textLabel.text = [NSString stringWithFormat:@"第%ld行", indexPath.row];
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {

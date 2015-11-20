@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LXViewController.h"
 
-@interface LXProfileViewController : UIViewController
+@interface LXProfileViewController : LXViewController
 
 @end

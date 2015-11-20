@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LXViewController.h"
 
-@interface LXProductViewController : UIViewController
+@interface LXProductViewController : LXViewController
 
 @end
