@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B28C219C1BFEB7B7007B579F /* LXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28C219B1BFEB7B7007B579F /* LXViewController.m */; };
-		B28C21A21BFEBDBA007B579F /* UIColor+LXColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B28C21A11BFEBDBA007B579F /* UIColor+LXColor.m */; };
 		B29B8E6F1BFD60AD0036F166 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8E6E1BFD60AD0036F166 /* main.m */; };
 		B29B8E721BFD60AD0036F166 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8E711BFD60AD0036F166 /* AppDelegate.m */; };
 		B29B8E781BFD60AD0036F166 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29B8E761BFD60AD0036F166 /* Main.storyboard */; };
@@ -70,8 +69,6 @@
 /* Begin PBXFileReference section */
 		B28C219A1BFEB7B7007B579F /* LXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXViewController.h; sourceTree = "<group>"; };
 		B28C219B1BFEB7B7007B579F /* LXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXViewController.m; sourceTree = "<group>"; };
-		B28C21A01BFEBDBA007B579F /* UIColor+LXColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LXColor.h"; sourceTree = "<group>"; };
-		B28C21A11BFEBDBA007B579F /* UIColor+LXColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LXColor.m"; sourceTree = "<group>"; };
 		B29B8E6A1BFD60AD0036F166 /* iOSstation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSstation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29B8E6E1BFD60AD0036F166 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B29B8E701BFD60AD0036F166 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -200,8 +197,6 @@
 		B28C219F1BFEBD7B007B579F /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				B28C21A01BFEBDBA007B579F /* UIColor+LXColor.h */,
-				B28C21A11BFEBDBA007B579F /* UIColor+LXColor.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -567,7 +562,6 @@
 				B29B8F101BFD7E160036F166 /* UIImageView+WebCache.m in Sources */,
 				B29B8EC21BFD63FA0036F166 /* AFURLResponseSerialization.m in Sources */,
 				B29B8EC01BFD63FA0036F166 /* AFURLConnectionOperation.m in Sources */,
-				B28C21A21BFEBDBA007B579F /* UIColor+LXColor.m in Sources */,
 				B29B8ED41BFD696F0036F166 /* LXProfileViewController.m in Sources */,
 				B29B8F0C1BFD7E160036F166 /* UIImage+GIF.m in Sources */,
 				B29B8F0E1BFD7E160036F166 /* UIImage+WebP.m in Sources */,
