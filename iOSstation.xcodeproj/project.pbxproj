@@ -29,7 +29,6 @@
 		B29B8ECE1BFD68CF0036F166 /* LXHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8ECD1BFD68CF0036F166 /* LXHotViewController.m */; };
 		B29B8ED11BFD69420036F166 /* LXProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8ED01BFD69420036F166 /* LXProductViewController.m */; };
 		B29B8ED41BFD696F0036F166 /* LXProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8ED31BFD696F0036F166 /* LXProfileViewController.m */; };
-		B29B8ED71BFD69930036F166 /* LXOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8ED61BFD69930036F166 /* LXOtherViewController.m */; };
 		B29B8EDF1BFD77E40036F166 /* LXBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8EDE1BFD77E40036F166 /* LXBannerView.m */; };
 		B29B8F021BFD7E160036F166 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8EE21BFD7E160036F166 /* MKAnnotationView+WebCache.m */; };
 		B29B8F031BFD7E160036F166 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8EE41BFD7E160036F166 /* NSData+ImageContentType.m */; };
@@ -47,6 +46,9 @@
 		B29B8F0F1BFD7E160036F166 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8EFD1BFD7E160036F166 /* UIImageView+HighlightedWebCache.m */; };
 		B29B8F101BFD7E160036F166 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8EFF1BFD7E160036F166 /* UIImageView+WebCache.m */; };
 		B29B8F111BFD7E160036F166 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8F011BFD7E160036F166 /* UIView+WebCacheOperation.m */; };
+		B2C7CB1A1C02A41D004A35BE /* LXHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C7CB191C02A41D004A35BE /* LXHTTPRequest.m */; };
+		B2C7CB1E1C02B566004A35BE /* LXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C7CB1D1C02B566004A35BE /* LXLoginViewController.m */; };
+		B2C7CB211C02C440004A35BE /* LXOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C7CB201C02C440004A35BE /* LXOtherViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,8 +114,6 @@
 		B29B8ED01BFD69420036F166 /* LXProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXProductViewController.m; sourceTree = "<group>"; };
 		B29B8ED21BFD696F0036F166 /* LXProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXProfileViewController.h; sourceTree = "<group>"; };
 		B29B8ED31BFD696F0036F166 /* LXProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXProfileViewController.m; sourceTree = "<group>"; };
-		B29B8ED51BFD69930036F166 /* LXOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXOtherViewController.h; sourceTree = "<group>"; };
-		B29B8ED61BFD69930036F166 /* LXOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXOtherViewController.m; sourceTree = "<group>"; };
 		B29B8EDD1BFD77E40036F166 /* LXBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXBannerView.h; sourceTree = "<group>"; };
 		B29B8EDE1BFD77E40036F166 /* LXBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXBannerView.m; sourceTree = "<group>"; };
 		B29B8EE11BFD7E160036F166 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -149,6 +149,12 @@
 		B29B8EFF1BFD7E160036F166 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		B29B8F001BFD7E160036F166 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		B29B8F011BFD7E160036F166 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		B2C7CB181C02A41D004A35BE /* LXHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXHTTPRequest.h; sourceTree = "<group>"; };
+		B2C7CB191C02A41D004A35BE /* LXHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXHTTPRequest.m; sourceTree = "<group>"; };
+		B2C7CB1C1C02B566004A35BE /* LXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXLoginViewController.h; sourceTree = "<group>"; };
+		B2C7CB1D1C02B566004A35BE /* LXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXLoginViewController.m; sourceTree = "<group>"; };
+		B2C7CB1F1C02C440004A35BE /* LXOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXOtherViewController.h; sourceTree = "<group>"; };
+		B2C7CB201C02C440004A35BE /* LXOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXOtherViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,8 +310,9 @@
 		B29B8EA51BFD635F0036F166 /* item4 */ = {
 			isa = PBXGroup;
 			children = (
-				B29B8ED51BFD69930036F166 /* LXOtherViewController.h */,
-				B29B8ED61BFD69930036F166 /* LXOtherViewController.m */,
+				B2C7CB1B1C02B54F004A35BE /* Login */,
+				B2C7CB1F1C02C440004A35BE /* LXOtherViewController.h */,
+				B2C7CB201C02C440004A35BE /* LXOtherViewController.m */,
 			);
 			name = item4;
 			sourceTree = "<group>";
@@ -313,6 +320,7 @@
 		B29B8EA61BFD63660036F166 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B2C7CB171C02A404004A35BE /* Tool */,
 				B29B8ECB1BFD66D60036F166 /* Controller */,
 				B29B8ECA1BFD66CF0036F166 /* Others */,
 			);
@@ -414,6 +422,24 @@
 				B29B8F011BFD7E160036F166 /* UIView+WebCacheOperation.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		B2C7CB171C02A404004A35BE /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				B2C7CB181C02A41D004A35BE /* LXHTTPRequest.h */,
+				B2C7CB191C02A41D004A35BE /* LXHTTPRequest.m */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
+		B2C7CB1B1C02B54F004A35BE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B2C7CB1C1C02B566004A35BE /* LXLoginViewController.h */,
+				B2C7CB1D1C02B566004A35BE /* LXLoginViewController.m */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,9 +578,10 @@
 				B29B8EBB1BFD63FA0036F166 /* AFHTTPRequestOperation.m in Sources */,
 				B29B8F0F1BFD7E160036F166 /* UIImageView+HighlightedWebCache.m in Sources */,
 				B29B8EBC1BFD63FA0036F166 /* AFHTTPRequestOperationManager.m in Sources */,
-				B29B8ED71BFD69930036F166 /* LXOtherViewController.m in Sources */,
 				B29B8ED11BFD69420036F166 /* LXProductViewController.m in Sources */,
+				B2C7CB1A1C02A41D004A35BE /* LXHTTPRequest.m in Sources */,
 				B29B8F091BFD7E160036F166 /* SDWebImageManager.m in Sources */,
+				B2C7CB1E1C02B566004A35BE /* LXLoginViewController.m in Sources */,
 				B29B8F061BFD7E160036F166 /* SDWebImageDecoder.m in Sources */,
 				B29B8EC91BFD66920036F166 /* LXNavigationController.m in Sources */,
 				B29B8EBE1BFD63FA0036F166 /* AFNetworkReachabilityManager.m in Sources */,
@@ -574,6 +601,7 @@
 				B29B8EC11BFD63FA0036F166 /* AFURLRequestSerialization.m in Sources */,
 				B29B8EC31BFD63FA0036F166 /* AFURLSessionManager.m in Sources */,
 				B29B8F0D1BFD7E160036F166 /* UIImage+MultiFormat.m in Sources */,
+				B2C7CB211C02C440004A35BE /* LXOtherViewController.m in Sources */,
 				B28C219C1BFEB7B7007B579F /* LXViewController.m in Sources */,
 				B29B8F0B1BFD7E160036F166 /* UIButton+WebCache.m in Sources */,
 				B29B8E721BFD60AD0036F166 /* AppDelegate.m in Sources */,
