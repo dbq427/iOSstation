@@ -519,7 +519,7 @@
         <!--Login View Controller-->
         <scene sceneID="12b-my-E73">
             <objects>
-                <viewController id="hPk-7R-FZe" customClass="LXLoginViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="hPk-7R-FZe" customClass="LXLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TfL-rG-Un5"/>
                         <viewControllerLayoutGuide type="bottom" id="CYz-QW-eX8"/>
