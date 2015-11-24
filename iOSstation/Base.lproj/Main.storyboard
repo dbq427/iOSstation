@@ -155,6 +155,39 @@
             <point key="canvasLocation" x="934" y="505"/>
         </scene>
         <!--我的财富-->
+        <scene sceneID="vyA-jA-f67">
+            <objects>
+                <viewController id="NzJ-NJ-3YN" customClass="LXProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MxG-NB-hp1"/>
+                        <viewControllerLayoutGuide type="bottom" id="aLD-DY-C1U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZSc-Kn-2RB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39D-qW-MTK" customClass="HMWaterflowView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="39D-qW-MTK" secondAttribute="trailing" id="1Uv-JZ-3AJ"/>
+                            <constraint firstAttribute="bottom" secondItem="39D-qW-MTK" secondAttribute="bottom" id="54g-mX-Qq8"/>
+                            <constraint firstItem="39D-qW-MTK" firstAttribute="leading" secondItem="ZSc-Kn-2RB" secondAttribute="leading" id="Fri-6D-Er7"/>
+                            <constraint firstItem="39D-qW-MTK" firstAttribute="top" secondItem="ZSc-Kn-2RB" secondAttribute="top" id="TWw-xE-zf0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的财富" id="Nrg-t1-BJS"/>
+                    <connections>
+                        <outlet property="waterFlowView" destination="39D-qW-MTK" id="5nP-S0-x7v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sQ6-qI-hoL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="1151"/>
+        </scene>
+        <!--我的财富-->
         <scene sceneID="Cxk-Tz-6PF">
             <objects>
                 <navigationController id="vy7-Bn-J7q" customClass="LXNavigationController" sceneMemberID="viewController">
@@ -164,7 +197,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="gPu-rW-0iO" kind="relationship" relationship="rootViewController" id="ABx-Fb-DMx"/>
+                        <segue destination="NzJ-NJ-3YN" kind="relationship" relationship="rootViewController" id="pJ6-AL-1Hr"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPm-4d-lhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -187,41 +220,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hT-e7-lCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="203" y="1800"/>
-        </scene>
-        <!--Profile View Controller-->
-        <scene sceneID="QfP-pP-ZKR">
-            <objects>
-                <collectionViewController id="gPu-rW-0iO" customClass="LXProfileViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="uNo-xC-glL">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DTd-GW-AZA">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="tJ9-mA-e9x">
-                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="gPu-rW-0iO" id="fsp-OJ-AgZ"/>
-                            <outlet property="delegate" destination="gPu-rW-0iO" id="bFM-Xk-GNl"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" id="zOU-um-5Xi"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p5P-5C-9Ly" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="928" y="1151"/>
         </scene>
         <!--其他-->
         <scene sceneID="pya-9o-haE">

@@ -2,18 +2,18 @@
 //  LXProfileViewController.m
 //  iOSstation
 //
-//  Created by 张彦东 on 15/11/23.
+//  Created by 张彦东 on 15/11/24.
 //  Copyright © 2015年 lx. All rights reserved.
 //
 
-#define Margin 10
-#define Column 2
-
 #import "LXProfileViewController.h"
-#import "LXCollectionItemModel.h"
-#import "LXCollectionViewCell.h"
+#import "HMWaterflowView.h"
+#import "LXWaterFlowViewModel.h"
+#import "LXWaterFlowViewCell.h"
 
-@interface LXProfileViewController () <UICollectionViewDelegateFlowLayout>
+@interface LXProfileViewController () <HMWaterflowViewDataSource, HMWaterflowViewDelegate>
+
+@property (weak, nonatomic) IBOutlet HMWaterflowView *waterFlowView;
 
 @property (nonatomic, strong) NSArray * dataArray;
 
@@ -21,108 +21,53 @@
 
 @implementation LXProfileViewController
 
-static NSString * const reuseIdentifier = @"Cell";
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.waterFlowView.dataSource = self;
+    self.waterFlowView.delegate = self;
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
+    NSArray * dictArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"TestFile" ofType:@"plist"]];
+    NSMutableArray * dataArray = [[NSMutableArray alloc] init];
     
-    NSMutableArray * mArray = [[NSMutableArray alloc] init];
-    NSArray * datas = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"TestFile" ofType:@"plist"]];
-    for (NSDictionary * dict in datas) {
-        LXCollectionItemModel * cItem = [LXCollectionItemModel collectionItemModelWithDict:dict];
-        [mArray addObject:cItem];
+    for (NSDictionary * dict in dictArray) {
+        LXWaterFlowViewModel * model = [LXWaterFlowViewModel waterFlowViewModelWithDict:dict];
+        [dataArray addObject:model];
     }
-    self.dataArray = mArray;
-    [self.collectionView reloadData];
+    self.dataArray = dataArray;
+    [self.waterFlowView reloadData];
     
-    
-    // Register cell classes
-//    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-    NSLog(@"%@", NSStringFromSelector(_cmd));
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-#pragma mark <UICollectionViewDataSource>
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-
-    return 1;
-}
-
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-
+#pragma mark - 数据源方法
+- (NSUInteger)numberOfCellsInWaterflowView:(HMWaterflowView *)waterflowView
+{
     return self.dataArray.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-//    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"reuseItem" forIndexPath:indexPath];
+- (LXWaterFlowViewCell *)waterflowView:(HMWaterflowView *)waterflowView cellAtIndex:(NSUInteger)index
+{
+    LXWaterFlowViewCell *cell = [LXWaterFlowViewCell cellWithWaterFlowView:waterflowView];
     
-    LXCollectionViewCell * cell = [LXCollectionViewCell collectionViewCellWithCollectionView:collectionView indexPath:indexPath];
-    cell.itemModel = self.dataArray[indexPath.row];
+    cell.dataModel = self.dataArray[index];
+    
     return cell;
 }
 
-#pragma mark <UICollectionViewDelegate>
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
+- (NSUInteger)numberOfColumnsInWaterflowView:(HMWaterflowView *)waterflowView
+{
+    return 3;
 }
 
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
+#pragma mark - 代理方法
+- (CGFloat)waterflowView:(HMWaterflowView *)waterflowView heightAtIndex:(NSUInteger)index
+{
+    LXWaterFlowViewModel * data = self.dataArray[index];
+    // 根据cell的宽度 和 图片的宽高比 算出 cell的高度
+    return waterflowView.cellWidth * data.imageHeight / data.imageWidth;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
-#pragma mark - UICollectionViewDelegateFlowLayout
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    CGFloat width = (self.view.frame.size.width - (Column + 1) * Margin) / Column;
-    
-    LXCollectionItemModel * itemModel = self.dataArray[indexPath.row];
-    
-    CGFloat height = width / itemModel.imageWidth * itemModel.imageHeight;
-    
-    return CGSizeMake(width, height);
-    
-}
+
 
 @end

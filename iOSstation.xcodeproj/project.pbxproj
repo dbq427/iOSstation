@@ -10,6 +10,11 @@
 		B28C219C1BFEB7B7007B579F /* LXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28C219B1BFEB7B7007B579F /* LXViewController.m */; };
 		B295E0571C03F382002CC60B /* LXTagsScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B295E0561C03F382002CC60B /* LXTagsScrollView.m */; };
 		B295E05A1C0409F7002CC60B /* LXPagesScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B295E0591C0409F7002CC60B /* LXPagesScrollView.m */; };
+		B295E05D1C044062002CC60B /* LXProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B295E05C1C044062002CC60B /* LXProfileViewController.m */; };
+		B295E0691C044DC9002CC60B /* HMWaterflowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B295E0661C044DC9002CC60B /* HMWaterflowView.m */; };
+		B295E06A1C044DC9002CC60B /* HMWaterflowViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B295E0681C044DC9002CC60B /* HMWaterflowViewCell.m */; };
+		B295E06D1C045159002CC60B /* LXWaterFlowViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B295E06C1C045159002CC60B /* LXWaterFlowViewModel.m */; };
+		B295E0701C045318002CC60B /* LXWaterFlowViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B295E06F1C045318002CC60B /* LXWaterFlowViewCell.m */; };
 		B29B8E6F1BFD60AD0036F166 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8E6E1BFD60AD0036F166 /* main.m */; };
 		B29B8E721BFD60AD0036F166 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8E711BFD60AD0036F166 /* AppDelegate.m */; };
 		B29B8E781BFD60AD0036F166 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29B8E761BFD60AD0036F166 /* Main.storyboard */; };
@@ -50,11 +55,7 @@
 		B2C7CB1A1C02A41D004A35BE /* LXHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C7CB191C02A41D004A35BE /* LXHTTPRequest.m */; };
 		B2C7CB1E1C02B566004A35BE /* LXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C7CB1D1C02B566004A35BE /* LXLoginViewController.m */; };
 		B2C7CB211C02C440004A35BE /* LXOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C7CB201C02C440004A35BE /* LXOtherViewController.m */; };
-		B2C7CB241C030B5D004A35BE /* LXProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C7CB231C030B5D004A35BE /* LXProfileViewController.m */; };
 		B2C7CB2C1C030CEB004A35BE /* TestFile.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2C7CB2B1C030CEB004A35BE /* TestFile.plist */; };
-		B2C7CB321C03109E004A35BE /* LXCollectionItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C7CB311C03109E004A35BE /* LXCollectionItemModel.m */; };
-		B2C7CB351C0311A3004A35BE /* LXCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C7CB341C0311A3004A35BE /* LXCollectionViewCell.m */; };
-		B2C7CB371C032488004A35BE /* LXCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2C7CB361C032488004A35BE /* LXCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,16 @@
 		B295E0561C03F382002CC60B /* LXTagsScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTagsScrollView.m; sourceTree = "<group>"; };
 		B295E0581C0409F7002CC60B /* LXPagesScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXPagesScrollView.h; sourceTree = "<group>"; };
 		B295E0591C0409F7002CC60B /* LXPagesScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXPagesScrollView.m; sourceTree = "<group>"; };
+		B295E05B1C044062002CC60B /* LXProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXProfileViewController.h; sourceTree = "<group>"; };
+		B295E05C1C044062002CC60B /* LXProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXProfileViewController.m; sourceTree = "<group>"; };
+		B295E0651C044DC9002CC60B /* HMWaterflowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMWaterflowView.h; sourceTree = "<group>"; };
+		B295E0661C044DC9002CC60B /* HMWaterflowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMWaterflowView.m; sourceTree = "<group>"; };
+		B295E0671C044DC9002CC60B /* HMWaterflowViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMWaterflowViewCell.h; sourceTree = "<group>"; };
+		B295E0681C044DC9002CC60B /* HMWaterflowViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMWaterflowViewCell.m; sourceTree = "<group>"; };
+		B295E06B1C045159002CC60B /* LXWaterFlowViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXWaterFlowViewModel.h; sourceTree = "<group>"; };
+		B295E06C1C045159002CC60B /* LXWaterFlowViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXWaterFlowViewModel.m; sourceTree = "<group>"; };
+		B295E06E1C045318002CC60B /* LXWaterFlowViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXWaterFlowViewCell.h; sourceTree = "<group>"; };
+		B295E06F1C045318002CC60B /* LXWaterFlowViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXWaterFlowViewCell.m; sourceTree = "<group>"; };
 		B29B8E6A1BFD60AD0036F166 /* iOSstation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSstation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29B8E6E1BFD60AD0036F166 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B29B8E701BFD60AD0036F166 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -163,14 +174,7 @@
 		B2C7CB1D1C02B566004A35BE /* LXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXLoginViewController.m; sourceTree = "<group>"; };
 		B2C7CB1F1C02C440004A35BE /* LXOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXOtherViewController.h; sourceTree = "<group>"; };
 		B2C7CB201C02C440004A35BE /* LXOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXOtherViewController.m; sourceTree = "<group>"; };
-		B2C7CB221C030B5D004A35BE /* LXProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXProfileViewController.h; sourceTree = "<group>"; };
-		B2C7CB231C030B5D004A35BE /* LXProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXProfileViewController.m; sourceTree = "<group>"; };
 		B2C7CB2B1C030CEB004A35BE /* TestFile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestFile.plist; sourceTree = "<group>"; };
-		B2C7CB301C03109E004A35BE /* LXCollectionItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCollectionItemModel.h; sourceTree = "<group>"; };
-		B2C7CB311C03109E004A35BE /* LXCollectionItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCollectionItemModel.m; sourceTree = "<group>"; };
-		B2C7CB331C0311A3004A35BE /* LXCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCollectionViewCell.h; sourceTree = "<group>"; };
-		B2C7CB341C0311A3004A35BE /* LXCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCollectionViewCell.m; sourceTree = "<group>"; };
-		B2C7CB361C032488004A35BE /* LXCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +236,17 @@
 				B295E0591C0409F7002CC60B /* LXPagesScrollView.m */,
 			);
 			name = ScrollView;
+			sourceTree = "<group>";
+		};
+		B295E0611C0441E8002CC60B /* WaterFlowView */ = {
+			isa = PBXGroup;
+			children = (
+				B295E0651C044DC9002CC60B /* HMWaterflowView.h */,
+				B295E0661C044DC9002CC60B /* HMWaterflowView.m */,
+				B295E0671C044DC9002CC60B /* HMWaterflowViewCell.h */,
+				B295E0681C044DC9002CC60B /* HMWaterflowViewCell.m */,
+			);
+			name = WaterFlowView;
 			sourceTree = "<group>";
 		};
 		B29B8E611BFD60AD0036F166 = {
@@ -330,6 +345,7 @@
 		B29B8EA41BFD635B0036F166 /* item3 */ = {
 			isa = PBXGroup;
 			children = (
+				B295E0611C0441E8002CC60B /* WaterFlowView */,
 				B2C7CB271C030B9F004A35BE /* Model */,
 				B2C7CB261C030B9A004A35BE /* View */,
 				B2C7CB251C030B8C004A35BE /* Controller */,
@@ -475,8 +491,8 @@
 		B2C7CB251C030B8C004A35BE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B2C7CB221C030B5D004A35BE /* LXProfileViewController.h */,
-				B2C7CB231C030B5D004A35BE /* LXProfileViewController.m */,
+				B295E05B1C044062002CC60B /* LXProfileViewController.h */,
+				B295E05C1C044062002CC60B /* LXProfileViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -484,9 +500,8 @@
 		B2C7CB261C030B9A004A35BE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B2C7CB331C0311A3004A35BE /* LXCollectionViewCell.h */,
-				B2C7CB341C0311A3004A35BE /* LXCollectionViewCell.m */,
-				B2C7CB361C032488004A35BE /* LXCollectionViewCell.xib */,
+				B295E06E1C045318002CC60B /* LXWaterFlowViewCell.h */,
+				B295E06F1C045318002CC60B /* LXWaterFlowViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -494,8 +509,8 @@
 		B2C7CB271C030B9F004A35BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B2C7CB301C03109E004A35BE /* LXCollectionItemModel.h */,
-				B2C7CB311C03109E004A35BE /* LXCollectionItemModel.m */,
+				B295E06B1C045159002CC60B /* LXWaterFlowViewModel.h */,
+				B295E06C1C045159002CC60B /* LXWaterFlowViewModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -606,7 +621,6 @@
 			files = (
 				B2C7CB2C1C030CEB004A35BE /* TestFile.plist in Resources */,
 				B29B8E7D1BFD60AD0036F166 /* LaunchScreen.storyboard in Resources */,
-				B2C7CB371C032488004A35BE /* LXCollectionViewCell.xib in Resources */,
 				B29B8E7A1BFD60AD0036F166 /* Assets.xcassets in Resources */,
 				B29B8E781BFD60AD0036F166 /* Main.storyboard in Resources */,
 			);
@@ -635,7 +649,6 @@
 			files = (
 				B29B8F111BFD7E160036F166 /* UIView+WebCacheOperation.m in Sources */,
 				B29B8ECE1BFD68CF0036F166 /* LXHotViewController.m in Sources */,
-				B2C7CB321C03109E004A35BE /* LXCollectionItemModel.m in Sources */,
 				B29B8EBB1BFD63FA0036F166 /* AFHTTPRequestOperation.m in Sources */,
 				B29B8F0F1BFD7E160036F166 /* UIImageView+HighlightedWebCache.m in Sources */,
 				B29B8EBC1BFD63FA0036F166 /* AFHTTPRequestOperationManager.m in Sources */,
@@ -644,10 +657,13 @@
 				B29B8F091BFD7E160036F166 /* SDWebImageManager.m in Sources */,
 				B2C7CB1E1C02B566004A35BE /* LXLoginViewController.m in Sources */,
 				B29B8F061BFD7E160036F166 /* SDWebImageDecoder.m in Sources */,
+				B295E05D1C044062002CC60B /* LXProfileViewController.m in Sources */,
 				B29B8EC91BFD66920036F166 /* LXNavigationController.m in Sources */,
 				B29B8EBE1BFD63FA0036F166 /* AFNetworkReachabilityManager.m in Sources */,
+				B295E0701C045318002CC60B /* LXWaterFlowViewCell.m in Sources */,
 				B29B8F0A1BFD7E160036F166 /* SDWebImagePrefetcher.m in Sources */,
 				B29B8F101BFD7E160036F166 /* UIImageView+WebCache.m in Sources */,
+				B295E0691C044DC9002CC60B /* HMWaterflowView.m in Sources */,
 				B29B8EC21BFD63FA0036F166 /* AFURLResponseSerialization.m in Sources */,
 				B29B8EC01BFD63FA0036F166 /* AFURLConnectionOperation.m in Sources */,
 				B29B8F0C1BFD7E160036F166 /* UIImage+GIF.m in Sources */,
@@ -656,8 +672,7 @@
 				B29B8F031BFD7E160036F166 /* NSData+ImageContentType.m in Sources */,
 				B29B8F051BFD7E160036F166 /* SDWebImageCompat.m in Sources */,
 				B29B8EBF1BFD63FA0036F166 /* AFSecurityPolicy.m in Sources */,
-				B2C7CB241C030B5D004A35BE /* LXProfileViewController.m in Sources */,
-				B2C7CB351C0311A3004A35BE /* LXCollectionViewCell.m in Sources */,
+				B295E06D1C045159002CC60B /* LXWaterFlowViewModel.m in Sources */,
 				B29B8EBD1BFD63FA0036F166 /* AFHTTPSessionManager.m in Sources */,
 				B29B8F041BFD7E160036F166 /* SDImageCache.m in Sources */,
 				B29B8F071BFD7E160036F166 /* SDWebImageDownloader.m in Sources */,
@@ -671,6 +686,7 @@
 				B29B8E721BFD60AD0036F166 /* AppDelegate.m in Sources */,
 				B29B8F021BFD7E160036F166 /* MKAnnotationView+WebCache.m in Sources */,
 				B29B8F081BFD7E160036F166 /* SDWebImageDownloaderOperation.m in Sources */,
+				B295E06A1C044DC9002CC60B /* HMWaterflowViewCell.m in Sources */,
 				B29B8E6F1BFD60AD0036F166 /* main.m in Sources */,
 				B29B8EDF1BFD77E40036F166 /* LXBannerView.m in Sources */,
 				B29B8EC61BFD65C10036F166 /* LXTabBarController.m in Sources */,
