@@ -25,6 +25,9 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    [self.pagesScrollView layoutIfNeeded];
+    [self.tagsScrollView layoutIfNeeded];
+    
     NSArray * tagArray = @[@"推荐", @"营养快线", @"哇哈哈", @"七喜", @"可口可乐", @"美年达", @"五个字以上的饮料", @"东方树叶", @"..."];
     
     self.tagsScrollView.tagDelegate = self;

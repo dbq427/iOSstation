@@ -53,6 +53,8 @@
     
     _pageCount = pageCount;
     
+    NSLog(@"%@", NSStringFromCGRect(self.frame));
+    
     self.contentSize = CGSizeMake(self.frame.size.width * pageCount, 0);
     
     NSMutableArray * viewArray = [[NSMutableArray alloc] init];

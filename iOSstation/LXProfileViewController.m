@@ -23,6 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.waterFlowView layoutIfNeeded];
 
     self.waterFlowView.dataSource = self;
     self.waterFlowView.delegate = self;
