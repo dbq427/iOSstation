@@ -118,7 +118,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="McB-Rn-xyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="935" y="-151"/>
+            <point key="canvasLocation" x="944" y="-144"/>
         </scene>
         <!--产品列表-->
         <scene sceneID="Vpy-yX-FOC">
