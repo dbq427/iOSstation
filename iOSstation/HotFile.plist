@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imageUrlStr</key>
+		<string>http://img4q.duitang.com/uploads/item/201504/17/20150417H1719_VzWQv.jpeg</string>
+		<key>title</key>
+		<string>标题1</string>
+	</dict>
+	<dict>
+		<key>imageUrlStr</key>
+		<string>http://imgsrc.baidu.com/forum/w%3D580/sign=0c1b13ef0c3387449cc52f74610ed937/bf94b9315c6034a8a4e0f53ecb13495408237644.jpg</string>
+		<key>title</key>
+		<string>标题2</string>
+	</dict>
+	<dict>
+		<key>imageUrlStr</key>
+		<string>http://pic39.nipic.com/20140318/18221536_093828421119_2.jpg</string>
+		<key>title</key>
+		<string>标题3</string>
+	</dict>
+	<dict>
+		<key>imageUrlStr</key>
+		<string>http://img6.ph.126.net/MlnW-JTY4Ml6J1HORtgbjw==/606578574828541266.jpg</string>
+		<key>title</key>
+		<string>标题4</string>
+	</dict>
+	<dict>
+		<key>imageUrlStr</key>
+		<string>http://ww1.sinaimg.cn/mw600/8758e340jw1e80ptpik3sj21hc0u0gxb.jpg</string>
+		<key>title</key>
+		<string>标题5</string>
+	</dict>
+	<dict>
+		<key>imageUrlStr</key>
+		<string>http://img4.imgtn.bdimg.com/it/u=1653524301,3666323399&amp;fm=21&amp;gp=0.jpg</string>
+		<key>title</key>
+		<string>标题6</string>
+	</dict>
+	<dict>
+		<key>imageUrlStr</key>
+		<string>http://pub.chinaunix.net/uploadfile/201204/20120422080605427.jpg</string>
+		<key>title</key>
+		<string>标题7</string>
+	</dict>
+	<dict>
+		<key>imageUrlStr</key>
+		<string>http://pic1.duowan.com/kdxy/0903/102452889219/102453366441.jpg</string>
+		<key>title</key>
+		<string>标题8</string>
+	</dict>
+	<dict>
+		<key>imageUrlStr</key>
+		<string>http://img5.imgtn.bdimg.com/it/u=3006460200,2315113593&amp;fm=21&amp;gp=0.jpg</string>
+		<key>title</key>
+		<string>标题9</string>
+	</dict>
+	<dict>
+		<key>imageUrlStr</key>
+		<string>http://www.ahly.cc/uploadfile/2012/1213/20121213082717117.jpg</string>
+		<key>title</key>
+		<string>标题10</string>
+	</dict>
+</array>
+</plist>

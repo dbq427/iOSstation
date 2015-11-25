@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B28C219C1BFEB7B7007B579F /* LXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28C219B1BFEB7B7007B579F /* LXViewController.m */; };
+		B29166F11C0553B40015931E /* LXHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29166F01C0553B40015931E /* LXHotViewController.m */; };
+		B29166F31C0554900015931E /* HotFile.plist in Resources */ = {isa = PBXBuildFile; fileRef = B29166F21C0554900015931E /* HotFile.plist */; };
+		B29166F91C0555090015931E /* LXHotViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B29166F81C0555090015931E /* LXHotViewCell.m */; };
+		B29166FC1C0555860015931E /* LXHotCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B29166FB1C0555860015931E /* LXHotCellModel.m */; };
 		B295E0571C03F382002CC60B /* LXTagsScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B295E0561C03F382002CC60B /* LXTagsScrollView.m */; };
 		B295E05A1C0409F7002CC60B /* LXPagesScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B295E0591C0409F7002CC60B /* LXPagesScrollView.m */; };
 		B295E05D1C044062002CC60B /* LXProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B295E05C1C044062002CC60B /* LXProfileViewController.m */; };
@@ -33,7 +37,6 @@
 		B29B8EC31BFD63FA0036F166 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8EBA1BFD63FA0036F166 /* AFURLSessionManager.m */; };
 		B29B8EC61BFD65C10036F166 /* LXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8EC51BFD65C10036F166 /* LXTabBarController.m */; };
 		B29B8EC91BFD66920036F166 /* LXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8EC81BFD66920036F166 /* LXNavigationController.m */; };
-		B29B8ECE1BFD68CF0036F166 /* LXHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8ECD1BFD68CF0036F166 /* LXHotViewController.m */; };
 		B29B8ED11BFD69420036F166 /* LXProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8ED01BFD69420036F166 /* LXProductViewController.m */; };
 		B29B8EDF1BFD77E40036F166 /* LXBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8EDE1BFD77E40036F166 /* LXBannerView.m */; };
 		B29B8F021BFD7E160036F166 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8EE21BFD7E160036F166 /* MKAnnotationView+WebCache.m */; };
@@ -78,6 +81,13 @@
 /* Begin PBXFileReference section */
 		B28C219A1BFEB7B7007B579F /* LXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXViewController.h; sourceTree = "<group>"; };
 		B28C219B1BFEB7B7007B579F /* LXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXViewController.m; sourceTree = "<group>"; };
+		B29166EF1C0553B40015931E /* LXHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXHotViewController.h; sourceTree = "<group>"; };
+		B29166F01C0553B40015931E /* LXHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXHotViewController.m; sourceTree = "<group>"; };
+		B29166F21C0554900015931E /* HotFile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HotFile.plist; sourceTree = "<group>"; };
+		B29166F71C0555090015931E /* LXHotViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXHotViewCell.h; sourceTree = "<group>"; };
+		B29166F81C0555090015931E /* LXHotViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXHotViewCell.m; sourceTree = "<group>"; };
+		B29166FA1C0555860015931E /* LXHotCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXHotCellModel.h; sourceTree = "<group>"; };
+		B29166FB1C0555860015931E /* LXHotCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXHotCellModel.m; sourceTree = "<group>"; };
 		B295E0551C03F382002CC60B /* LXTagsScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTagsScrollView.h; sourceTree = "<group>"; };
 		B295E0561C03F382002CC60B /* LXTagsScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTagsScrollView.m; sourceTree = "<group>"; };
 		B295E0581C0409F7002CC60B /* LXPagesScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXPagesScrollView.h; sourceTree = "<group>"; };
@@ -129,8 +139,6 @@
 		B29B8EC51BFD65C10036F166 /* LXTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTabBarController.m; sourceTree = "<group>"; };
 		B29B8EC71BFD66920036F166 /* LXNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXNavigationController.h; sourceTree = "<group>"; };
 		B29B8EC81BFD66920036F166 /* LXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNavigationController.m; sourceTree = "<group>"; };
-		B29B8ECC1BFD68CF0036F166 /* LXHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXHotViewController.h; sourceTree = "<group>"; };
-		B29B8ECD1BFD68CF0036F166 /* LXHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXHotViewController.m; sourceTree = "<group>"; };
 		B29B8ECF1BFD69420036F166 /* LXProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXProductViewController.h; sourceTree = "<group>"; };
 		B29B8ED01BFD69420036F166 /* LXProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXProductViewController.m; sourceTree = "<group>"; };
 		B29B8EDD1BFD77E40036F166 /* LXBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXBannerView.h; sourceTree = "<group>"; };
@@ -227,6 +235,33 @@
 			name = Category;
 			sourceTree = "<group>";
 		};
+		B29166F41C0554D80015931E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B29166FA1C0555860015931E /* LXHotCellModel.h */,
+				B29166FB1C0555860015931E /* LXHotCellModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B29166F51C0554DD0015931E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B29166EF1C0553B40015931E /* LXHotViewController.h */,
+				B29166F01C0553B40015931E /* LXHotViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B29166F61C0554E50015931E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B29166F71C0555090015931E /* LXHotViewCell.h */,
+				B29166F81C0555090015931E /* LXHotViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		B295E0541C03F35F002CC60B /* ScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +323,7 @@
 				B29B8E7B1BFD60AD0036F166 /* LaunchScreen.storyboard */,
 				B29B8E7E1BFD60AD0036F166 /* Info.plist */,
 				B29B8E6E1BFD60AD0036F166 /* main.m */,
+				B29166F21C0554900015931E /* HotFile.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -325,9 +361,10 @@
 		B29B8EA11BFD63470036F166 /* item1 */ = {
 			isa = PBXGroup;
 			children = (
+				B29166F61C0554E50015931E /* View */,
+				B29166F51C0554DD0015931E /* Controller */,
+				B29166F41C0554D80015931E /* Model */,
 				B29B8EDC1BFD77C50036F166 /* BannerView */,
-				B29B8ECC1BFD68CF0036F166 /* LXHotViewController.h */,
-				B29B8ECD1BFD68CF0036F166 /* LXHotViewController.m */,
 			);
 			name = item1;
 			sourceTree = "<group>";
@@ -622,6 +659,7 @@
 				B2C7CB2C1C030CEB004A35BE /* TestFile.plist in Resources */,
 				B29B8E7D1BFD60AD0036F166 /* LaunchScreen.storyboard in Resources */,
 				B29B8E7A1BFD60AD0036F166 /* Assets.xcassets in Resources */,
+				B29166F31C0554900015931E /* HotFile.plist in Resources */,
 				B29B8E781BFD60AD0036F166 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,7 +686,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B29B8F111BFD7E160036F166 /* UIView+WebCacheOperation.m in Sources */,
-				B29B8ECE1BFD68CF0036F166 /* LXHotViewController.m in Sources */,
 				B29B8EBB1BFD63FA0036F166 /* AFHTTPRequestOperation.m in Sources */,
 				B29B8F0F1BFD7E160036F166 /* UIImageView+HighlightedWebCache.m in Sources */,
 				B29B8EBC1BFD63FA0036F166 /* AFHTTPRequestOperationManager.m in Sources */,
@@ -673,14 +710,17 @@
 				B29B8F051BFD7E160036F166 /* SDWebImageCompat.m in Sources */,
 				B29B8EBF1BFD63FA0036F166 /* AFSecurityPolicy.m in Sources */,
 				B295E06D1C045159002CC60B /* LXWaterFlowViewModel.m in Sources */,
+				B29166FC1C0555860015931E /* LXHotCellModel.m in Sources */,
 				B29B8EBD1BFD63FA0036F166 /* AFHTTPSessionManager.m in Sources */,
 				B29B8F041BFD7E160036F166 /* SDImageCache.m in Sources */,
 				B29B8F071BFD7E160036F166 /* SDWebImageDownloader.m in Sources */,
+				B29166F91C0555090015931E /* LXHotViewCell.m in Sources */,
 				B29B8EC11BFD63FA0036F166 /* AFURLRequestSerialization.m in Sources */,
 				B29B8EC31BFD63FA0036F166 /* AFURLSessionManager.m in Sources */,
 				B29B8F0D1BFD7E160036F166 /* UIImage+MultiFormat.m in Sources */,
 				B295E05A1C0409F7002CC60B /* LXPagesScrollView.m in Sources */,
 				B2C7CB211C02C440004A35BE /* LXOtherViewController.m in Sources */,
+				B29166F11C0553B40015931E /* LXHotViewController.m in Sources */,
 				B28C219C1BFEB7B7007B579F /* LXViewController.m in Sources */,
 				B29B8F0B1BFD7E160036F166 /* UIButton+WebCache.m in Sources */,
 				B29B8E721BFD60AD0036F166 /* AppDelegate.m in Sources */,
