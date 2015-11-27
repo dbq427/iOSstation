@@ -10,6 +10,16 @@
 
 @interface LXHTTPRequest : NSObject
 
-
+/**
+ *  send request
+ *
+ *  @param method    GET or POST , default is GET
+ */
++ (void)requestURL:(NSString *)requestURL
+        httpMethod:(NSString *)method
+            params:(NSMutableDictionary *)parmas
+              file:(NSDictionary *)files
+           success:(void (^)(id data))success
+              fail:(void (^)(NSError *error))fail;
 
 @end

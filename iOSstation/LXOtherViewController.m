@@ -8,12 +8,15 @@
 
 #import "LXOtherViewController.h"
 #import "LXLoginViewController.h"
+#import "CLLockVC.h"
 
 @interface LXOtherViewController () <LXLoginViewControllerDelegate>
 
 @property (nonatomic, assign, getter=isLogin) BOOL login;
 
 @property (weak, nonatomic) IBOutlet UILabel *loginTextLabel;
+
+@property (nonatomic, copy) NSString * pwd;
 
 
 @end
@@ -95,6 +98,58 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     
     return 0.1;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.section != 3) return;
+        
+        switch (indexPath.row) {
+            case 0:
+                if (self.pwd) {
+                    [self showAlertViewWithTitle:@"已经设置过密码，可以修改或者重置密码"];
+                } else {
+                    [CLLockVC showSettingLockVCInVC:self successBlock:^(CLLockVC *lockVC, NSString *pwd) {
+                        self.pwd = pwd;
+                        [self showAlertViewWithTitle:@"密码设置成功"];
+                        [lockVC dismiss:1.0f];
+                    }];
+                }
+                break;
+            case 1:
+                if (!self.pwd) {
+                    [self showAlertViewWithTitle:@"还没有创建密码"];
+                } else {
+                    [CLLockVC showModifyLockVCInVC:self successBlock:^(CLLockVC *lockVC, NSString *pwd) {
+                        self.pwd = pwd;
+                        [self showAlertViewWithTitle:@"密码修改成功"];
+                        [lockVC dismiss:1.0f];
+                    }];
+                }
+                break;
+            case 2:
+                if (!self.pwd) {
+                    [self showAlertViewWithTitle:@"请先设置密码"];
+                } else {
+                    [CLLockVC showVerifyLockVCInVC:self forgetPwdBlock:^{
+                        [self showAlertViewWithTitle:@"忘记密码相关设置"];
+                    } successBlock:^(CLLockVC *lockVC, NSString *pwd) {
+                        self.pwd = nil;
+                        [self showAlertViewWithTitle:@"密码重置成功"];
+                        [lockVC dismiss:1.0f];
+                    }];
+                }
+                break;
+            default:
+                break;
+        }
+}
+
+- (void)showAlertViewWithTitle:(NSString *)title {
+    
+    UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:title message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alertView show];
 }
 
 
