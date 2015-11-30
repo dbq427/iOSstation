@@ -8,7 +8,7 @@
 
 #import "LXOtherViewController.h"
 #import "LXLoginViewController.h"
-#import "CLLockVC.h"
+#import "ZLockController.h"
 
 @interface LXOtherViewController () <LXLoginViewControllerDelegate>
 
@@ -107,38 +107,24 @@
         
         switch (indexPath.row) {
             case 0:
-                if (self.pwd) {
+                if ([ZLockController hasLocalPassCode]) {
                     [self showAlertViewWithTitle:@"已经设置过密码，可以修改或者重置密码"];
                 } else {
-                    [CLLockVC showSettingLockVCInVC:self successBlock:^(CLLockVC *lockVC, NSString *pwd) {
-                        self.pwd = pwd;
-                        [self showAlertViewWithTitle:@"密码设置成功"];
-                        [lockVC dismiss:1.0f];
-                    }];
+                    [ZLockController showRegistLockVCInVC:self completeBlock:nil];
                 }
                 break;
             case 1:
-                if (!self.pwd) {
-                    [self showAlertViewWithTitle:@"还没有创建密码"];
+                if ([ZLockController hasLocalPassCode]) {
+                    [ZLockController showModifyLockVCInVC:self completeBlock:nil];
                 } else {
-                    [CLLockVC showModifyLockVCInVC:self successBlock:^(CLLockVC *lockVC, NSString *pwd) {
-                        self.pwd = pwd;
-                        [self showAlertViewWithTitle:@"密码修改成功"];
-                        [lockVC dismiss:1.0f];
-                    }];
+                    [self showAlertViewWithTitle:@"还没有创建密码"];
                 }
                 break;
             case 2:
-                if (!self.pwd) {
-                    [self showAlertViewWithTitle:@"请先设置密码"];
+                if ([ZLockController hasLocalPassCode]) {
+                    [ZLockController showVerifyLockVCInVC:self completeBlock:nil];
                 } else {
-                    [CLLockVC showVerifyLockVCInVC:self forgetPwdBlock:^{
-                        [self showAlertViewWithTitle:@"忘记密码相关设置"];
-                    } successBlock:^(CLLockVC *lockVC, NSString *pwd) {
-                        self.pwd = nil;
-                        [self showAlertViewWithTitle:@"密码重置成功"];
-                        [lockVC dismiss:1.0f];
-                    }];
+                    [self showAlertViewWithTitle:@"请先设置密码"];
                 }
                 break;
             default:
