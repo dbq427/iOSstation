@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B25576251C0E8C8200780806 /* ZBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B25576241C0E8C8200780806 /* ZBannerView.m */; };
 		B28C219C1BFEB7B7007B579F /* LXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28C219B1BFEB7B7007B579F /* LXViewController.m */; };
 		B29166F11C0553B40015931E /* LXHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29166F01C0553B40015931E /* LXHotViewController.m */; };
 		B29166F31C0554900015931E /* HotFile.plist in Resources */ = {isa = PBXBuildFile; fileRef = B29166F21C0554900015931E /* HotFile.plist */; };
@@ -51,7 +52,6 @@
 		B29B8EC61BFD65C10036F166 /* LXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8EC51BFD65C10036F166 /* LXTabBarController.m */; };
 		B29B8EC91BFD66920036F166 /* LXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8EC81BFD66920036F166 /* LXNavigationController.m */; };
 		B29B8ED11BFD69420036F166 /* LXProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8ED01BFD69420036F166 /* LXProductViewController.m */; };
-		B29B8EDF1BFD77E40036F166 /* LXBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8EDE1BFD77E40036F166 /* LXBannerView.m */; };
 		B29B8F021BFD7E160036F166 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8EE21BFD7E160036F166 /* MKAnnotationView+WebCache.m */; };
 		B29B8F031BFD7E160036F166 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8EE41BFD7E160036F166 /* NSData+ImageContentType.m */; };
 		B29B8F041BFD7E160036F166 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B29B8EE61BFD7E160036F166 /* SDImageCache.m */; };
@@ -101,6 +101,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B25576231C0E8C8200780806 /* ZBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBannerView.h; sourceTree = "<group>"; };
+		B25576241C0E8C8200780806 /* ZBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBannerView.m; sourceTree = "<group>"; };
 		B28C219A1BFEB7B7007B579F /* LXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXViewController.h; sourceTree = "<group>"; };
 		B28C219B1BFEB7B7007B579F /* LXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXViewController.m; sourceTree = "<group>"; };
 		B29166EF1C0553B40015931E /* LXHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXHotViewController.h; sourceTree = "<group>"; };
@@ -189,8 +191,6 @@
 		B29B8EC81BFD66920036F166 /* LXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNavigationController.m; sourceTree = "<group>"; };
 		B29B8ECF1BFD69420036F166 /* LXProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXProductViewController.h; sourceTree = "<group>"; };
 		B29B8ED01BFD69420036F166 /* LXProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXProductViewController.m; sourceTree = "<group>"; };
-		B29B8EDD1BFD77E40036F166 /* LXBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXBannerView.h; sourceTree = "<group>"; };
-		B29B8EDE1BFD77E40036F166 /* LXBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXBannerView.m; sourceTree = "<group>"; };
 		B29B8EE11BFD7E160036F166 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		B29B8EE21BFD7E160036F166 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		B29B8EE31BFD7E160036F166 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -273,6 +273,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B25576221C0E8C8200780806 /* ZBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				B25576231C0E8C8200780806 /* ZBannerView.h */,
+				B25576241C0E8C8200780806 /* ZBannerView.m */,
+			);
+			path = ZBannerView;
+			sourceTree = "<group>";
+		};
 		B28778661C07E6FF002C177F /* Lock */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,7 +511,7 @@
 				B29166F61C0554E50015931E /* View */,
 				B29166F51C0554DD0015931E /* Controller */,
 				B29166F41C0554D80015931E /* Model */,
-				B29B8EDC1BFD77C50036F166 /* BannerView */,
+				B25576221C0E8C8200780806 /* ZBannerView */,
 			);
 			name = item1;
 			sourceTree = "<group>";
@@ -594,15 +603,6 @@
 				B28C219B1BFEB7B7007B579F /* LXViewController.m */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		B29B8EDC1BFD77C50036F166 /* BannerView */ = {
-			isa = PBXGroup;
-			children = (
-				B29B8EDD1BFD77E40036F166 /* LXBannerView.h */,
-				B29B8EDE1BFD77E40036F166 /* LXBannerView.m */,
-			);
-			name = BannerView;
 			sourceTree = "<group>";
 		};
 		B29B8EE01BFD7E160036F166 /* SDWebImage */ = {
@@ -906,6 +906,7 @@
 				B29B8F061BFD7E160036F166 /* SDWebImageDecoder.m in Sources */,
 				B29167331C058A6C0015931E /* MJRefreshBackFooter.m in Sources */,
 				B295E05D1C044062002CC60B /* LXProfileViewController.m in Sources */,
+				B25576251C0E8C8200780806 /* ZBannerView.m in Sources */,
 				B29B8EC91BFD66920036F166 /* LXNavigationController.m in Sources */,
 				B29B8EBE1BFD63FA0036F166 /* AFNetworkReachabilityManager.m in Sources */,
 				B295E0701C045318002CC60B /* LXWaterFlowViewCell.m in Sources */,
@@ -950,7 +951,6 @@
 				B29167361C058A6C0015931E /* MJRefreshHeader.m in Sources */,
 				B291673F1C058A6C0015931E /* MJRefreshStateHeader.m in Sources */,
 				B29B8E6F1BFD60AD0036F166 /* main.m in Sources */,
-				B29B8EDF1BFD77E40036F166 /* LXBannerView.m in Sources */,
 				B29B8EC61BFD65C10036F166 /* LXTabBarController.m in Sources */,
 				B29167351C058A6C0015931E /* MJRefreshFooter.m in Sources */,
 			);

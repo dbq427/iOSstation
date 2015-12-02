@@ -7,10 +7,10 @@
 //
 
 #import "LXHotViewController.h"
-#import "LXBannerView.h"
 #import "LXHotViewCell.h"
 #import "LXHotCellModel.h"
 #import "MJRefresh.h"
+#import "ZBannerView.h"
 
 
 @interface LXHotViewController ()
@@ -30,7 +30,7 @@
                         @"http://hiphotos.baidu.com/%95%D7%D4%AA%B5%C0/pic/item/432e6436d9cd9b4deac4af86.jpg"];
     
     
-    LXBannerView * bannerView = [[LXBannerView alloc] init];
+    ZBannerView * bannerView = [ZBannerView bannerView];
     self.tableView.tableHeaderView = bannerView;
     bannerView.imageUrls = array;
     

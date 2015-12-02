@@ -1,18 +1,15 @@
 //
-//  LXBannerView.m
-//  iOSstation
+//  ZBannerView.m
+//  ZBannerViewDemo
 //
-//  Created by 张彦东 on 15/11/19.
-//  Copyright © 2015年 lx. All rights reserved.
+//  Created by 张彦东 on 15/12/1.
+//  Copyright © 2015年 yd. All rights reserved.
 //
 
-#define LXImageScale 0.5
-#define LXImageScrollTimeInterval 2
-
-#import "LXBannerView.h"
+#import "ZBannerView.h"
 #import "UIButton+WebCache.h"
 
-@interface LXBannerView () <UIScrollViewDelegate>
+@interface ZBannerView () <UIScrollViewDelegate>
 
 @property (nonatomic, weak) UIPageControl * pageControl;
 
@@ -24,67 +21,127 @@
 
 @property (nonatomic, assign) NSInteger currentImageIndex;
 
+@property (nonatomic, strong) NSArray * imageArray;
+
 @end
 
-@implementation LXBannerView
+@implementation ZBannerView
+
 {
     NSTimer * _timer;
 }
 
+#pragma mark - Constructor
++ (instancetype)bannerView {
+    return [[self alloc] init];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    
+    if (self = [super initWithFrame:frame]) {
+        
+        self.imageScale = 0.55;
+        self.imageScrollTimeInterval = 2;
+    }
+    return self;
+}
+
+#pragma mark - 加载函数
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     
-    self.frame = CGRectMake(0, 0, newSuperview.bounds.size.width, newSuperview.bounds.size.width * LXImageScale);
+    [super willMoveToSuperview:newSuperview];
+    
+    self.frame = CGRectMake(0, 0, newSuperview.bounds.size.width, newSuperview.bounds.size.width * self.imageScale);
     self.scrollView.frame = self.bounds;
     self.pageControl.center = CGPointMake(self.center.x, CGRectGetMaxY(self.scrollView.frame) - 20);
 }
 
-
-- (void)setImageUrls:(NSArray *)imageUrls {
-    
-    _imageUrls = imageUrls;
+- (void)layoutSubviews {
     
     self.scrollView.contentSize = CGSizeMake(self.frame.size.width * 3, 0);
-    self.pageControl.numberOfPages = imageUrls.count;
-    
     CGFloat vWidth = self.scrollView.frame.size.width;
     CGFloat vHeight = self.scrollView.frame.size.height;
     self.preImageButton.frame = CGRectMake(0, 0, vWidth, vHeight);
     self.currentImageButton.frame = CGRectMake(vWidth, 0, vWidth, vHeight);
     self.nextImageButton.frame = CGRectMake(vWidth * 2, 0, vWidth, vHeight);
+}
+
+#pragma mark - setter
+- (void)setImageUrls:(NSArray *)imageUrls {
+    
+    _imageUrls = imageUrls;
+    
+    self.imageArray = imageUrls;
+    
+    self.pageControl.numberOfPages = imageUrls.count;
     
     [self loadImageButtons];
-    
     [self startTimer];
 }
 
+- (void)setImageNames:(NSArray *)imageNames {
+    
+    _imageNames = imageNames;
+    
+    self.imageArray = imageNames;
+    
+    self.pageControl.numberOfPages = imageNames.count;
+    
+    [self loadImageButtons];
+    [self startTimer];
+}
+
+
+- (void)setImageScrollTimeInterval:(float)imageScrollTimeInterval {
+    
+    [self stopTimer];
+    
+    _imageScrollTimeInterval = imageScrollTimeInterval;
+    [self startTimer];
+    
+}
+
+#pragma mark - NSTimer
 - (void)startTimer {
     
-    _timer = [NSTimer scheduledTimerWithTimeInterval:LXImageScrollTimeInterval target:self selector:@selector(scrollImage) userInfo:nil repeats:YES];
-    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    if (_timer == nil) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:self.imageScrollTimeInterval target:self selector:@selector(scrollImage) userInfo:nil repeats:YES];
+        [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+        
+    }
 }
 
 - (void)stopTimer {
     
-    [_timer invalidate];
-    _timer = nil;
+    if ([_timer isValid]) {
+        [_timer invalidate];
+        _timer = nil;
+    }
 }
 
 - (void)scrollImage {
     
     [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width * 2, 0) animated:YES];
-//    [self scrollViewDidEndDecelerating:self.scrollView];
     [self scrollViewDidEndScrollingAnimation:self.scrollView];
 }
 
 - (void)loadImageButtons {
     
-    NSInteger preIndex = self.currentImageIndex == 0 ? self.imageUrls.count - 1 : self.currentImageIndex - 1;
-    [self.preImageButton sd_setBackgroundImageWithURL:self.imageUrls[preIndex] forState:UIControlStateNormal];
+    NSInteger preIndex = self.currentImageIndex == 0 ? self.imageArray.count - 1 : self.currentImageIndex - 1;
+    NSInteger nextIndex = self.currentImageIndex == self.imageArray.count - 1 ? 0 : self.currentImageIndex + 1;
     
-    [self.currentImageButton sd_setBackgroundImageWithURL:self.imageUrls[self.currentImageIndex] forState:UIControlStateNormal];
-    
-    NSInteger nextIndex = self.currentImageIndex == self.imageUrls.count - 1 ? 0 : self.currentImageIndex + 1;
-    [self.nextImageButton sd_setBackgroundImageWithURL:self.imageUrls[nextIndex] forState:UIControlStateNormal];
+    if (self.imageNames) {
+        
+        [self.preImageButton setBackgroundImage:[UIImage imageNamed:self.imageArray[preIndex]] forState:UIControlStateNormal];
+        [self.currentImageButton setBackgroundImage:[UIImage imageNamed:self.imageArray[self.currentImageIndex]] forState:UIControlStateNormal];
+        [self.nextImageButton setBackgroundImage:[UIImage imageNamed:self.imageArray[nextIndex]] forState:UIControlStateNormal];
+        
+    } else {
+        /** 使用SDWebImage时候使用如下代码 导入UIButton * WebCache **/
+        [self.preImageButton sd_setBackgroundImageWithURL:self.imageArray[preIndex] forState:UIControlStateNormal];
+        [self.currentImageButton sd_setBackgroundImageWithURL:self.imageArray[self.currentImageIndex] forState:UIControlStateNormal];
+        [self.nextImageButton sd_setBackgroundImageWithURL:self.imageArray[nextIndex] forState:UIControlStateNormal];
+    }
     
     [self.scrollView setContentOffset:CGPointMake(self.frame.size.width, 0)];
 }
@@ -107,16 +164,15 @@
     if (cosIndex == 1) return;
     
     if (cosIndex > 1) {
-        self.currentImageIndex = self.currentImageIndex + 1 == self.imageUrls.count ? 0 : self.currentImageIndex + 1;
+        self.currentImageIndex = self.currentImageIndex + 1 == self.imageArray.count ? 0 : self.currentImageIndex + 1;
         self.pageControl.currentPage = self.pageControl.currentPage == self.pageControl.numberOfPages - 1 ? 0 : self.pageControl.currentPage + 1;
         
     } else {
-        self.currentImageIndex = self.currentImageIndex - 1 < 0 ? self.imageUrls.count - 1 : self.currentImageIndex - 1;
+        self.currentImageIndex = self.currentImageIndex - 1 < 0 ? self.imageArray.count - 1 : self.currentImageIndex - 1;
         self.pageControl.currentPage = self.pageControl.currentPage == 0 ? self.pageControl.numberOfPages - 1 : self.pageControl.currentPage - 1;
     }
     
     [self loadImageButtons];
-    
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
@@ -124,7 +180,7 @@
     [self scrollViewDidEndScrollingAnimation:scrollView];
 }
 
-#pragma mark - lazy load
+#pragma mark - 懒加载
 - (UIScrollView *)scrollView {
     
     if (_scrollView == nil) {
@@ -155,60 +211,46 @@
 - (UIButton *)preImageButton {
     
     if (_preImageButton == nil) {
-        
-        UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self.scrollView addSubview:button];
-        _preImageButton = button;
-        [button addTarget:self action:@selector(buttonDidClick:) forControlEvents:UIControlEventTouchUpInside];
-        button.adjustsImageWhenHighlighted = NO;
+         _preImageButton = [self setupImageButton];
     }
     return _preImageButton;
 }
 
 - (UIButton *)currentImageButton {
-    
     if (_currentImageButton == nil) {
-        
-        UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self.scrollView addSubview:button];
-        _currentImageButton = button;
-        [button addTarget:self action:@selector(buttonDidClick:) forControlEvents:UIControlEventTouchUpInside];
-        button.adjustsImageWhenHighlighted = NO;
+        _currentImageButton = [self setupImageButton];
     }
     return _currentImageButton;
 }
 
 - (UIButton *)nextImageButton {
-    
     if (_nextImageButton == nil) {
-        
-        UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self.scrollView addSubview:button];
-        _nextImageButton = button;
-        [button addTarget:self action:@selector(buttonDidClick:) forControlEvents:UIControlEventTouchUpInside];
-        button.adjustsImageWhenHighlighted = NO;
+        _nextImageButton = [self setupImageButton];
     }
     return _nextImageButton;
 }
 
-- (void)setupImageButtonWithProperty:(UIButton *)proButton  {
+- (UIButton *)setupImageButton  {
     
     UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.scrollView addSubview:button];
-    proButton = button;
     [button addTarget:self action:@selector(buttonDidClick:) forControlEvents:UIControlEventTouchUpInside];
+    button.adjustsImageWhenHighlighted = NO;
+    return button;
 }
 
-#pragma mark - button click
+
+#pragma mark - 图片点击
 - (void)buttonDidClick:(UIButton *)button {
     
-    NSLog(@"button did click: index = %ld", self.currentImageIndex);
+    if ([self.delegate respondsToSelector:@selector(bannerView:imageDidClickWithIndex:)]) {
+        [self.delegate bannerView:self imageDidClickWithIndex:self.currentImageIndex];
+    }
 }
-
 
 - (void)dealloc {
     
-    if (_timer) {
+    if ([_timer isValid]) {
         [_timer invalidate];
     }
 }
